@@ -1,17 +1,14 @@
 ---
 format_version: 1.0.0
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-
 app:
   envs:
-  - BITRISE_PROJECT_PATH: "./BitriseXcode7Sample/BitriseXcode7Sample.xcodeproj"
+  - BITRISE_PROJECT_PATH: "./BitriseXcode7Sample.xcodeproj"
   - BITRISE_SCHEME: BitriseXcode7Sample
-
 trigger_map:
 - pattern: "*"
   is_pull_request_allowed: true
   workflow: primary
-
 workflows:
   primary:
     steps:
@@ -54,17 +51,7 @@ workflows:
     - xcode-test@1.1.2:
         title: 'Xcode: Unit Test'
         inputs:
-        - opts:
+        - simulator_device: iPhone 6
+          opts:
             is_expand: false
-          simulator_device: iPad
-    - xcode-archive@1.2.0:
-        title: 'Xcode: Create Archive'
-        inputs:
-        - output_dir: "${BITRISE_DEPLOY_DIR}"
-        outputs:
-        - BITRISE_IPA_PATH:
-          opts:
-            title: The created .ipa file's path
-        - BITRISE_DSYM_PATH:
-          opts:
-            title: The created .dSYM.zip file's path
+        - is_clean_build: 'no'

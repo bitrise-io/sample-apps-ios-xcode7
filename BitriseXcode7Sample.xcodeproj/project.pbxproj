@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA657C021BAA0038006BACF6 /* bitrise.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = bitrise.yml; sourceTree = "<group>"; };
 		BAC3840A1BA9F569005CFE20 /* BitriseXcode7Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitriseXcode7Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC3840D1BA9F569005CFE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAC384101BA9F569005CFE20 /* BitriseXcode7Sample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BitriseXcode7Sample.xcdatamodel; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		BAC384011BA9F569005CFE20 = {
 			isa = PBXGroup;
 			children = (
+				BA657C021BAA0038006BACF6 /* bitrise.yml */,
 				BAC3840C1BA9F569005CFE20 /* BitriseXcode7Sample */,
 				BAC384261BA9F569005CFE20 /* BitriseXcode7SampleTests */,
 				BAC384311BA9F569005CFE20 /* BitriseXcode7SampleUITests */,
@@ -491,6 +493,7 @@
 				BAC384391BA9F569005CFE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAC3843A1BA9F569005CFE20 /* Build configuration list for PBXNativeTarget "BitriseXcode7SampleTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +502,7 @@
 				BAC3843C1BA9F569005CFE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAC3843D1BA9F569005CFE20 /* Build configuration list for PBXNativeTarget "BitriseXcode7SampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +511,7 @@
 				BAC3843F1BA9F569005CFE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
