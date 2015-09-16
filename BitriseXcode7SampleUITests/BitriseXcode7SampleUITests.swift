@@ -35,19 +35,20 @@ class BitriseXcode7SampleUITests: XCTestCase {
         
         let app = XCUIApplication()
         let masterNavigationBar = app.navigationBars["Master"]
-        let editButton = masterNavigationBar.buttons["Edit"]
-        editButton.tap()
         masterNavigationBar.buttons["Add"].tap()
         
         let tablesQuery = app.tables
         let firstElemQuery = tablesQuery.cells.elementBoundByIndex(0)
         firstElemQuery.tap()
         app.navigationBars.matchingIdentifier("Detail").buttons["Master"].tap()
-        editButton.tap()
-        editButton.tap()
-        tablesQuery.buttons["Delete 2015-09-16 19:38:09 +0000"].tap()
-        tablesQuery.buttons["Delete"].tap()
+        masterNavigationBar.buttons["Edit"].tap()
         
+        firstElemQuery.buttons.elementBoundByIndex(0).tap()
+        firstElemQuery.buttons["Delete"].tap()
+        
+        masterNavigationBar.buttons["Done"].tap()
+        
+        XCTAssert(tablesQuery.cells.count == 0)
     }
     
 }
