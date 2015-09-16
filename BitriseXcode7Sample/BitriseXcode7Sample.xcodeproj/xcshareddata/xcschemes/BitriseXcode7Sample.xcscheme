@@ -14,59 +14,59 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3EF16AA1B46BBA200F08FA3"
-               BuildableName = "BitriseTestingSample.app"
-               BlueprintName = "BitriseTestingSample"
-               ReferencedContainer = "container:BitriseTestingSample.xcodeproj">
+               BlueprintIdentifier = "BAC384091BA9F569005CFE20"
+               BuildableName = "BitriseXcode7Sample.app"
+               BlueprintName = "BitriseXcode7Sample"
+               ReferencedContainer = "container:BitriseXcode7Sample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3EF16BE1B46BBA300F08FA3"
-               BuildableName = "BitriseTestingSampleTests.xctest"
-               BlueprintName = "BitriseTestingSampleTests"
-               ReferencedContainer = "container:BitriseTestingSample.xcodeproj">
+               BlueprintIdentifier = "BAC384221BA9F569005CFE20"
+               BuildableName = "BitriseXcode7SampleTests.xctest"
+               BlueprintName = "BitriseXcode7SampleTests"
+               ReferencedContainer = "container:BitriseXcode7Sample.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3EF16C91B46BBA300F08FA3"
-               BuildableName = "BitriseTestingSampleUITests.xctest"
-               BlueprintName = "BitriseTestingSampleUITests"
-               ReferencedContainer = "container:BitriseTestingSample.xcodeproj">
+               BlueprintIdentifier = "BAC3842D1BA9F569005CFE20"
+               BuildableName = "BitriseXcode7SampleUITests.xctest"
+               BlueprintName = "BitriseXcode7SampleUITests"
+               ReferencedContainer = "container:BitriseXcode7Sample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3EF16AA1B46BBA200F08FA3"
-            BuildableName = "BitriseTestingSample.app"
-            BlueprintName = "BitriseTestingSample"
-            ReferencedContainer = "container:BitriseTestingSample.xcodeproj">
+            BlueprintIdentifier = "BAC384091BA9F569005CFE20"
+            BuildableName = "BitriseXcode7Sample.app"
+            BlueprintName = "BitriseXcode7Sample"
+            ReferencedContainer = "container:BitriseXcode7Sample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -75,29 +75,29 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3EF16AA1B46BBA200F08FA3"
-            BuildableName = "BitriseTestingSample.app"
-            BlueprintName = "BitriseTestingSample"
-            ReferencedContainer = "container:BitriseTestingSample.xcodeproj">
+            BlueprintIdentifier = "BAC384091BA9F569005CFE20"
+            BuildableName = "BitriseXcode7Sample.app"
+            BlueprintName = "BitriseXcode7Sample"
+            ReferencedContainer = "container:BitriseXcode7Sample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3EF16AA1B46BBA200F08FA3"
-            BuildableName = "BitriseTestingSample.app"
-            BlueprintName = "BitriseTestingSample"
-            ReferencedContainer = "container:BitriseTestingSample.xcodeproj">
+            BlueprintIdentifier = "BAC384091BA9F569005CFE20"
+            BuildableName = "BitriseXcode7Sample.app"
+            BlueprintName = "BitriseXcode7Sample"
+            ReferencedContainer = "container:BitriseXcode7Sample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
