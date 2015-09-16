@@ -28,9 +28,26 @@ class BitriseXcode7SampleUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testAddAnItemGoToDetailsThenDeleteIt() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let masterNavigationBar = app.navigationBars["Master"]
+        let editButton = masterNavigationBar.buttons["Edit"]
+        editButton.tap()
+        masterNavigationBar.buttons["Add"].tap()
+        
+        let tablesQuery = app.tables
+        let firstElemQuery = tablesQuery.cells.elementBoundByIndex(0)
+        firstElemQuery.tap()
+        app.navigationBars.matchingIdentifier("Detail").buttons["Master"].tap()
+        editButton.tap()
+        editButton.tap()
+        tablesQuery.buttons["Delete 2015-09-16 19:38:09 +0000"].tap()
+        tablesQuery.buttons["Delete"].tap()
+        
     }
     
 }
