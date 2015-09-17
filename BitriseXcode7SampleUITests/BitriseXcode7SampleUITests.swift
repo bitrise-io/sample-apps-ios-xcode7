@@ -50,5 +50,4 @@ class BitriseXcode7SampleUITests: XCTestCase {
         
         XCTAssert(tablesQuery.cells.count == 0)
     }
-    
 }
