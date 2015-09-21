@@ -105,4 +105,16 @@ workflows:
         - is_clean_build: 'no'
     - xcode-archive@1.2.0: {}
     - bitrise-ios-deploy@2.1.0: {}
-    envs:
+    - slack:
+        inputs:
+        - webhook_url: $SLACK_WEBHOOK_URL
+        - channel: $SLACK_CHANNEL
+        - message: |-
+            `BITRISE_XCODE_TEST_RESULT`: ${BITRISE_XCODE_TEST_RESULT}
+            `BITRISE_XCODE_TEST_FULL_RESULTS_TEXT`:
+
+            ```
+            ${BITRISE_XCODE_TEST_FULL_RESULTS_TEXT}
+            ```
+          opts:
+            is_expand: true
