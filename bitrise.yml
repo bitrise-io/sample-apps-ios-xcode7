@@ -25,28 +25,6 @@ workflows:
 
             env
     - git-clone@3.0.0:
-        outputs:
-        - GIT_CLONE_COMMIT_HASH:
-          opts:
-            title: Cloned git commit's commit hash
-        - GIT_CLONE_COMMIT_MESSAGE_SUBJECT:
-          opts:
-            title: Cloned git commit's message subject
-        - GIT_CLONE_COMMIT_MESSAGE_BODY:
-          opts:
-            title: Cloned git commit's message body
-        - GIT_CLONE_COMMIT_AUTHOR_NAME:
-          opts:
-            title: Cloned git commit's author name
-        - GIT_CLONE_COMMIT_AUTHOR_EMAIL:
-          opts:
-            title: Cloned git commit's author email address
-        - GIT_CLONE_COMMIT_COMMITER_NAME:
-          opts:
-            title: Cloned git commit's committer name
-        - GIT_CLONE_COMMIT_COMMITER_EMAIL:
-          opts:
-            title: Cloned git commit's committer email
     - certificate-and-profile-installer@1.2.0: {}
     - select-xcode-version@2.0.0:
         inputs:
@@ -70,28 +48,6 @@ workflows:
 
             env
     - git-clone@3.0.0:
-        outputs:
-        - GIT_CLONE_COMMIT_HASH:
-          opts:
-            title: Cloned git commit's commit hash
-        - GIT_CLONE_COMMIT_MESSAGE_SUBJECT:
-          opts:
-            title: Cloned git commit's message subject
-        - GIT_CLONE_COMMIT_MESSAGE_BODY:
-          opts:
-            title: Cloned git commit's message body
-        - GIT_CLONE_COMMIT_AUTHOR_NAME:
-          opts:
-            title: Cloned git commit's author name
-        - GIT_CLONE_COMMIT_AUTHOR_EMAIL:
-          opts:
-            title: Cloned git commit's author email address
-        - GIT_CLONE_COMMIT_COMMITER_NAME:
-          opts:
-            title: Cloned git commit's committer name
-        - GIT_CLONE_COMMIT_COMMITER_EMAIL:
-          opts:
-            title: Cloned git commit's committer email
     - certificate-and-profile-installer@1.2.0: {}
     - select-xcode-version@2.0.0:
         inputs:
@@ -110,6 +66,7 @@ workflows:
         - webhook_url: $SLACK_WEBHOOK_URL
         - channel: $SLACK_CHANNEL
         - message: |-
+            `BITRISE_PUBLIC_INSTALL_PAGE_URL`: ${BITRISE_PUBLIC_INSTALL_PAGE_URL}
             `BITRISE_XCODE_TEST_RESULT`: ${BITRISE_XCODE_TEST_RESULT}
             `BITRISE_XCODE_TEST_FULL_RESULTS_TEXT`:
 
