@@ -6,6 +6,9 @@ app:
   - BITRISE_PROJECT_PATH: "./BitriseXcode7Sample.xcodeproj"
   - BITRISE_SCHEME: BitriseXcode7Sample
 trigger_map:
+- pattern: master
+  is_pull_request_allowed: false
+  workflow: master
 - pattern: "*"
   is_pull_request_allowed: true
   workflow: primary
@@ -48,10 +51,58 @@ workflows:
     - select-xcode-version@2.0.0:
         inputs:
         - version_channel_id: "-latest"
-    - xcode-test@1.1.2:
+    - xcode-test@1.3.0:
+        title: 'Xcode: Unit Test'
+        inputs:
+        - is_clean_build: 'no'
+        - is_full_output: 'no'
+        - simulator_device: iPhone 6 Plus
+    envs:
+  master:
+    steps:
+    - script:
+        title: Quick tests
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -e
+            set -v
+
+            env
+    - git-clone@3.0.0:
+        outputs:
+        - GIT_CLONE_COMMIT_HASH:
+          opts:
+            title: Cloned git commit's commit hash
+        - GIT_CLONE_COMMIT_MESSAGE_SUBJECT:
+          opts:
+            title: Cloned git commit's message subject
+        - GIT_CLONE_COMMIT_MESSAGE_BODY:
+          opts:
+            title: Cloned git commit's message body
+        - GIT_CLONE_COMMIT_AUTHOR_NAME:
+          opts:
+            title: Cloned git commit's author name
+        - GIT_CLONE_COMMIT_AUTHOR_EMAIL:
+          opts:
+            title: Cloned git commit's author email address
+        - GIT_CLONE_COMMIT_COMMITER_NAME:
+          opts:
+            title: Cloned git commit's committer name
+        - GIT_CLONE_COMMIT_COMMITER_EMAIL:
+          opts:
+            title: Cloned git commit's committer email
+    - certificate-and-profile-installer@1.2.0: {}
+    - select-xcode-version@2.0.0:
+        inputs:
+        - version_channel_id: "-latest"
+    - xcode-test@1.3.0:
         title: 'Xcode: Unit Test'
         inputs:
         - simulator_device: iPhone 6
           opts:
             is_expand: false
         - is_clean_build: 'no'
+    - xcode-archive@1.2.0: {}
+    - bitrise-ios-deploy@2.1.0: {}
+    envs:
