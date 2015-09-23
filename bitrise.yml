@@ -59,6 +59,9 @@ workflows:
           opts:
             is_expand: false
         - is_clean_build: 'no'
+    - set-xcode-build-number@1.0.0:
+        inputs:
+        - plist_path: ./BitriseXcode7Sample/Info.plist
     - xcode-archive@1.2.0: {}
     - bitrise-ios-deploy@2.1.0: {}
     - slack:
